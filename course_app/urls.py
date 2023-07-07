@@ -2,12 +2,14 @@ from django.urls import path
 from rest_framework.routers import DefaultRouter
 
 from course_app.apps import CourseAppConfig
-from course_app.views import CourseViewSet, LessonListView, LessonCreateView, LessonDeleteView, LessonDetailView, LessonUpdateView
+from course_app.views import CourseViewSet, LessonListView, LessonCreateView, LessonDeleteView, LessonDetailView, \
+    LessonUpdateView, PaymentListView, PaymentCreateView, PaymentDetailView, PaymentDeleteView, PaymentUpdateView
 
 app_name = CourseAppConfig.name
 
 router = DefaultRouter()
 router.register(r'course', CourseViewSet, basename='course')
+
 
 urlpatterns = [
     path('lesson/', LessonListView.as_view(), name='lesson_list'),
@@ -15,4 +17,9 @@ urlpatterns = [
     path('lesson/detail/<int:pk>/', LessonDetailView.as_view(), name='lesson_detail'),
     path('lesson/update/<int:pk>/', LessonUpdateView.as_view(), name='lesson_update'),
     path('lesson/delete/<int:pk>/', LessonDeleteView.as_view(), name='lesson_delete'),
+    path('payment/', PaymentListView.as_view(), name='payment_list'),
+    path('payment/create/', PaymentCreateView.as_view(), name='payment_create'),
+    path('paymentv/detail/<int:pk>/', PaymentDetailView.as_view(), name='payment_detail'),
+    path('payment/update/<int:pk>/', PaymentUpdateView.as_view(), name='payment_update'),
+    path('payment/delete/<int:pk>/', PaymentDeleteView.as_view(), name='payment_delete'),
 ] + router.urls

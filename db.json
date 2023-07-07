@@ -1,0 +1,86 @@
+[
+{
+  "model": "course_app.course",
+  "pk": 1,
+  "fields": {
+    "name": "course_test",
+    "preview": "",
+    "description": "cool"
+  }
+},
+{
+  "model": "course_app.course",
+  "pk": 2,
+  "fields": {
+    "name": "course_test_2",
+    "preview": "",
+    "description": "norm"
+  }
+},
+{
+  "model": "course_app.lesson",
+  "pk": 1,
+  "fields": {
+    "name": "Урок",
+    "description": "Test",
+    "preview": "",
+    "video": null,
+    "course": null
+  }
+},
+{
+  "model": "course_app.lesson",
+  "pk": 2,
+  "fields": {
+    "name": "Урок_1",
+    "description": "Test_1",
+    "preview": "",
+    "video": null,
+    "course": 1
+  }
+},
+{
+  "model": "course_app.payments",
+  "pk": 1,
+  "fields": {
+    "user": 1,
+    "payment_date": "2023-07-07",
+    "paid_course": 1,
+    "paid_lesson": null,
+    "payment_amount": 45000,
+    "method_payment": "cash"
+  }
+},
+{
+  "model": "course_app.payments",
+  "pk": 2,
+  "fields": {
+    "user": 1,
+    "payment_date": "2023-07-07",
+    "paid_course": null,
+    "paid_lesson": 1,
+    "payment_amount": 5000,
+    "method_payment": "transfer"
+  }
+},
+{
+  "model": "users.user",
+  "pk": 1,
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-06-29T20:24:08.805Z",
+    "email": "igorkonov1993@gmail.com",
+    "phone": "89202005060",
+    "city": "Obninsk",
+    "avatar": "",
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]
