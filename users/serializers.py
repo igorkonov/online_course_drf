@@ -11,7 +11,7 @@ class PaymentSerializer(serializers.ModelSerializer):
 
 
 class UserSerializer(serializers.ModelSerializer):
-    payment = PaymentSerializer(source='payments_set', many=True)
+    payment = PaymentSerializer(source='payments_set', many=True, read_only=True)
 
     def create(self, validated_data):
         payment = validated_data.pop('payment_set')
@@ -27,8 +27,21 @@ class UserSerializer(serializers.ModelSerializer):
         fields = (
             'id',
             'email',
+            'password',
             'phone',
             'city',
             'avatar',
             'payment',
+        )
+
+
+class AuthUserSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = (
+            'id',
+            'email',
+            'phone',
+            'city',
+            'avatar',
         )
