@@ -11,10 +11,10 @@ class PaymentSerializer(serializers.ModelSerializer):
 
 
 class UserSerializer(serializers.ModelSerializer):
-    payment = PaymentSerializer(source='payments_set', many=True, read_only=True)
+    payment = PaymentSerializer(source='payment_set', many=True, read_only=True)
 
     def create(self, validated_data):
-        payment = validated_data.pop('payment_set')
+        payment = validated_data.pop('payment_set', [])
         user = User.objects.create(**validated_data)
 
         for pay in payment:

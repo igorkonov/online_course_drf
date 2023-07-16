@@ -13,7 +13,7 @@ class UserViewSet(viewsets.ModelViewSet):
         if self.action == 'list':
             return AuthUserSerializer
         elif self.action == 'retrieve':
-            if self.request.user == self.get_object():
+            if self.request.user == self.get_object() or self.request.user.is_superuser:
                 return UserSerializer
             return AuthUserSerializer
         return UserSerializer

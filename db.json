@@ -182,6 +182,84 @@
   }
 },
 {
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2023-07-13T17:05:43.621Z",
+    "user": 2,
+    "content_type": 8,
+    "object_id": "3",
+    "object_repr": "test@mail.ru - 65767657: zanuda!",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2023-07-13T17:05:54.649Z",
+    "user": 2,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "igorkonov1993@gmail.com - 89202005060: Obninsk",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2023-07-13T17:37:40.457Z",
+    "user": 2,
+    "content_type": 8,
+    "object_id": "3",
+    "object_repr": "test@mail.ru - 65767657: zanuda!",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Staff status\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2023-07-13T17:42:25.293Z",
+    "user": 2,
+    "content_type": 7,
+    "object_id": "11",
+    "object_repr": "Oрк5!",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0421\\u0441\\u044b\\u043b\\u043a\\u0430 \\u043d\\u0430 \\u0432\\u0438\\u0434\\u0435\\u043e\", \"\\u041a\\u0443\\u0440\\u0441\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2023-07-13T19:23:38.510Z",
+    "user": 2,
+    "content_type": 10,
+    "object_id": "1",
+    "object_repr": "super@mail.ru - :  - ниочем: True",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 20,
+  "fields": {
+    "action_time": "2023-07-13T19:58:05.469Z",
+    "user": 2,
+    "content_type": 10,
+    "object_id": "2",
+    "object_repr": "igorkonov1993@gmail.com - 89202005060: Obninsk - курс вау!: True",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
   "model": "sessions.session",
   "pk": "c2gpvm6d3f6wozvslylrxr2vwfaymo6w",
   "fields": {
@@ -288,6 +366,90 @@
   }
 },
 {
+  "model": "course_app.lesson",
+  "pk": 5,
+  "fields": {
+    "name": "Урок4",
+    "description": "Test4",
+    "preview": "",
+    "video": null,
+    "course": null,
+    "author": null
+  }
+},
+{
+  "model": "course_app.lesson",
+  "pk": 6,
+  "fields": {
+    "name": "Урок5!",
+    "description": "Test5!",
+    "preview": "",
+    "video": null,
+    "course": null,
+    "author": null
+  }
+},
+{
+  "model": "course_app.lesson",
+  "pk": 7,
+  "fields": {
+    "name": "Урок6",
+    "description": "Test6",
+    "preview": "",
+    "video": null,
+    "course": null,
+    "author": null
+  }
+},
+{
+  "model": "course_app.lesson",
+  "pk": 8,
+  "fields": {
+    "name": "Урок7",
+    "description": "Test7",
+    "preview": "",
+    "video": null,
+    "course": null,
+    "author": null
+  }
+},
+{
+  "model": "course_app.lesson",
+  "pk": 9,
+  "fields": {
+    "name": "Урок8",
+    "description": "Test8",
+    "preview": "",
+    "video": null,
+    "course": null,
+    "author": null
+  }
+},
+{
+  "model": "course_app.lesson",
+  "pk": 11,
+  "fields": {
+    "name": "Oрк5!",
+    "description": "орк5!",
+    "preview": "",
+    "video": "https://www.youtube.com/watch?v=3Tk6Z6cmxJ4&ab_channel=R%C3%A9myM%C3%A9tailler",
+    "course": 5,
+    "author": 2
+  }
+},
+{
+  "model": "course_app.lesson",
+  "pk": 12,
+  "fields": {
+    "name": "Oрк6!",
+    "description": "орк6!",
+    "preview": "",
+    "video": "https://www.youtube.com/watch?v=mb6MYovtioY&ab_channel=RedBullBike",
+    "course": null,
+    "author": 2
+  }
+},
+{
   "model": "course_app.payments",
   "pk": 1,
   "fields": {
@@ -309,6 +471,24 @@
     "paid_lesson": 1,
     "payment_amount": 5000,
     "method_payment": "transfer"
+  }
+},
+{
+  "model": "course_app.subscription",
+  "pk": 1,
+  "fields": {
+    "course": 5,
+    "user": 2,
+    "status": true
+  }
+},
+{
+  "model": "course_app.subscription",
+  "pk": 2,
+  "fields": {
+    "course": 4,
+    "user": 1,
+    "status": true
   }
 },
 {
@@ -360,7 +540,7 @@
     "is_superuser": false,
     "first_name": "",
     "last_name": "",
-    "is_staff": true,
+    "is_staff": false,
     "is_active": true,
     "date_joined": "2023-07-11T11:03:39.724Z",
     "email": "test@mail.ru",
@@ -368,7 +548,14 @@
     "city": "zanuda!",
     "avatar": "",
     "groups": [],
-    "user_permissions": []
+    "user_permissions": [
+      22,
+      24,
+      26,
+      28,
+      34,
+      36
+    ]
   }
 }
 ]
