@@ -12,9 +12,8 @@ class UserTestCase(SetupTestCase):
     def test_user_create(self):
         response = self.client.post('/users/user/', self.test_data)
 
-        self.assertEqual(response.json(), {'id': 15,
+        self.assertEqual(response.json(), {'id': 9,
                                            "email": "test@gmail.com",
-                                           "password": "12345QWe",
                                            "phone": "111111",
                                            "city": "Testograd",
                                            "avatar": None})
@@ -24,12 +23,12 @@ class UserTestCase(SetupTestCase):
         self.client.post('/users/user/', self.test_data)
         response = self.client.get('/users/user/')
 
-        self.assertEqual(response.json(), [{'id': 18,
+        self.assertEqual(response.json(), [{'id': 12,
                                             "email": "test@test.ru",
                                             "phone": "111111111",
                                             "city": "Testograd",
                                             "avatar": None},
-                                           {'id': 19,
+                                           {'id': 13,
                                             "email": "test@gmail.com",
                                             "phone": "111111",
                                             "city": "Testograd",
@@ -38,23 +37,22 @@ class UserTestCase(SetupTestCase):
 
     def test_user_retrieve(self):
         self.client.post('/users/user/', self.test_data)
-        response = self.client.get('/users/user/20/')
+        response = self.client.get('/users/user/15/')
 
-        self.assertEqual(response.json(), {"id": 20,
-                                           "email": "test@test.ru",
-                                           "password": self.user.password,
-                                           "phone": "111111111",
+        self.assertEqual(response.json(), {"id": 15,
+                                           "email": "test@gmail.com",
+                                           "password": '',
+                                           "phone": "111111",
                                            "city": "Testograd",
                                            "avatar": None})
         self.assertEqual(response.status_code, status.HTTP_200_OK)
 
     def test_user_update(self):
         self.client.post('/users/user/', self.test_data)
-        response = self.client.patch('/users/user/22/', {'phone': '555555'})
+        response = self.client.patch('/users/user/17/', {'phone': '555555'})
 
-        self.assertEqual(response.json(), {"id": 22,
-                                           "email": "test@test.ru",
-                                           "password": self.user.password,
+        self.assertEqual(response.json(), {"id": 17,
+                                           "email": "test@gmail.com",
                                            "phone": "555555",
                                            "city": "Testograd",
                                            "avatar": None})
@@ -62,7 +60,7 @@ class UserTestCase(SetupTestCase):
 
     def test_user_destroy(self):
         self.client.post('/users/user/', self.test_data)
-        response_1 = self.client.delete('/users/user/16/')
-        response_2 = self.client.delete('/users/user/17/')
+        response_1 = self.client.delete('/users/user/10/')
+        response_2 = self.client.delete('/users/user/11/')
         self.assertEqual(response_1.status_code, status.HTTP_204_NO_CONTENT)
         self.assertEqual(response_2.status_code, status.HTTP_401_UNAUTHORIZED)

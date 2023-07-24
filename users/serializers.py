@@ -1,10 +1,15 @@
 from rest_framework import serializers
 
-from course_app.models import Payments
+from course_app.models import Payments, Subscription
 from users.models import User
 
 
 class PaymentSerializer(serializers.ModelSerializer):
+    def create(self, validated_data):
+        new_payment = Payments.objects.create(**validated_data)
+        Subscription.objects.create(payment=new_payment)
+        return new_payment
+
     class Meta:
         model = Payments
         fields = '__all__'
@@ -31,7 +36,7 @@ class UserSerializer(serializers.ModelSerializer):
             'phone',
             'city',
             'avatar',
-            'payment',
+            'payment'
         )
 
 
@@ -43,5 +48,5 @@ class AuthUserSerializer(serializers.ModelSerializer):
             'email',
             'phone',
             'city',
-            'avatar',
+            'avatar'
         )

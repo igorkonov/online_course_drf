@@ -1,7 +1,7 @@
 from rest_framework import serializers
 
-from course_app.models import Course, Lesson, Subscription
-from course_app.validators import VideoValidator
+from course_app.models import Course, Lesson, Subscription, Payments
+from course_app.validators import VideoValidator, CourseIdValidator
 
 
 class LessonSerializer(serializers.ModelSerializer):
@@ -13,7 +13,7 @@ class LessonSerializer(serializers.ModelSerializer):
             "description",
             "preview",
             "video",
-            "author",
+            "user",
         )
 
 
@@ -44,7 +44,8 @@ class CourseSerializer(serializers.ModelSerializer):
             "name",
             "preview",
             "description",
-            "author",
+            "price",
+            "user",
             "subscription",
             "lessons_count",
             "lessons",
@@ -55,3 +56,37 @@ class SubscriptionSerializer(serializers.ModelSerializer):
     class Meta:
         model = Subscription
         fields = '__all__'
+
+
+class PaymentIntentCreateSerializer(serializers.Serializer):
+    course_id = serializers.IntegerField(validators=[CourseIdValidator(field='course_id')])
+
+
+class PaymentMethodCreateSerializer(serializers.Serializer):
+    payment_intent_id = serializers.CharField(max_length=500)
+    payment_token = serializers.CharField(max_length=255)
+
+    def validate(self, value):
+        payment_intent_id = value['payment_intent_id']
+        payment = Payments.objects.get(payment_intent_id=payment_intent_id)
+        if payment is None:
+            raise serializers.ValidationError(f"Платеж с ID {payment_intent_id} не найден")
+        if payment.confirmation:
+            raise serializers.ValidationError(f"Платеж с ID {payment_intent_id} уже подтвержден")
+        return value
+
+
+class PaymentIntentConfirmSerializer(serializers.Serializer):
+    payment_intent_id = serializers.CharField(max_length=500)
+
+    def validate(self, value):
+
+        payment_intent_id = value['payment_intent_id']
+        payment = Payments.objects.get(payment_intent_id=payment_intent_id)
+        if payment is None:
+            raise serializers.ValidationError(f"Платеж с ID {payment_intent_id} не найден")
+        if payment.payment_method_id is None:
+            raise serializers.ValidationError(f"К платежу с ID {payment_intent_id} не привязан метод платежа")
+        if payment.confirmation:
+            raise serializers.ValidationError(f"Платеж с ID {payment_intent_id} уже подтвержден")
+        return value

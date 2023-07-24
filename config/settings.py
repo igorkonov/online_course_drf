@@ -35,13 +35,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'drf_yasg',
     'course_app',
     'django_filters',
     'users',
     'rest_framework',
     'corsheaders',
     'rest_framework_simplejwt',
-
 ]
 
 CORS_ALLOWED_ORIGINS = [
@@ -49,17 +49,17 @@ CORS_ALLOWED_ORIGINS = [
     "https://sub.example.com",
     "http://localhost:8080",
     "http://127.0.0.1:9000",
-    "http://read.only.com",
-    "http://change.allowed.com",
+
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    "http://change.allowed.com",
+    "https://read-and-write.example.com",
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -164,3 +164,6 @@ SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(days=1),
     'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
 }
+
+STRIPE_SECRET_KEY = 'sk_test_51NVHD6GRIHclJ1YSDHjRGCgbIMMgH63LzoEJM58vfxTd9xrmKpxdRgOAccbbczewLT8LaJIOyiWypFp56WumYeep00VOAcXmZY'
+STRIPE_PUBLIC_KEY = 'pk_test_51NVHD6GRIHclJ1YSVTKxjBdABj8i7KNlaJR726pLUGTWamg3j7BsGKkcA1CbgYpcPEA1ZNs1hXwsSeoKYa3gRU7C00Lo31d6v7'
