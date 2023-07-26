@@ -9,6 +9,7 @@ class Course(models.Model):
     preview = models.ImageField(upload_to='course/', **NULLABLE, verbose_name='превью (картинка)')
     description = models.TextField(verbose_name='описание')
     price = models.IntegerField(default=5000, verbose_name='стоимость курса')
+    last_update = models.DateTimeField(verbose_name='время обновления', **NULLABLE)
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, **NULLABLE, verbose_name='автор')
 
     class Meta:
@@ -49,7 +50,7 @@ class Payments(models.Model):
     paid_course = models.ForeignKey(Course, on_delete=models.CASCADE, **NULLABLE, verbose_name='оплаченный курс')
     paid_lesson = models.ForeignKey(Lesson, on_delete=models.CASCADE, **NULLABLE, verbose_name='оплаченный урок')
     payment_amount = models.PositiveIntegerField(verbose_name='сумма оплаты')
-    method_payment = models.CharField(max_length=20, choices=PAYMENT_CHOICES, default=CASH,
+    method_payment = models.CharField(max_length=20, choices=PAYMENT_CHOICES, default=TRANSFER,
                                       verbose_name='способ оплаты')
     payment_intent_id = models.CharField(max_length=500, **NULLABLE, verbose_name='ID намерения платежа')
     payment_method_id = models.CharField(max_length=500, **NULLABLE, verbose_name='ID метода платежа')

@@ -1,11 +1,8 @@
-from datetime import datetime
-
 from django.core.exceptions import ObjectDoesNotExist
 from rest_framework import status
 from rest_framework.test import APITestCase
-from stripe.api_resources.payment_method import PaymentMethod
 
-from course_app.models import Course, Lesson, Subscription, Payments
+from course_app.models import Course, Subscription, Payments
 from users.models import User
 
 
@@ -171,4 +168,3 @@ class SubscribeTestCase(SetupTestCase):
 
         with self.assertRaises(ObjectDoesNotExist):
             Subscription.objects.get(id=subscription.id)
-

@@ -4,7 +4,7 @@ from rest_framework.response import Response
 
 from users.models import User
 from users.permissions import IsUserProfile
-from users.serializers import UserSerializer, AuthUserSerializer, PaymentSerializer
+from users.serializers import UserSerializer, AuthUserSerializer
 
 
 class UserViewSet(viewsets.ModelViewSet):
@@ -27,5 +27,5 @@ class UserViewSet(viewsets.ModelViewSet):
             serializer_class = AuthUserSerializer
         serializer = serializer_class(self.get_object())
         serializer_data = serializer.data
-        #serializer_data['payment'] = PaymentSerializer(self.get_object().payment_set.all(), many=True).data
+
         return Response(serializer_data)

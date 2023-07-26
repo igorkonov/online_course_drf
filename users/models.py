@@ -37,8 +37,8 @@ class User(AbstractUser):
     username = None
 
     email = models.EmailField(verbose_name='почта', unique=True)
-    phone = models.CharField(max_length=25, verbose_name='номер телефона')
-    city = models.CharField(max_length=50, verbose_name='город')
+    phone = models.CharField(max_length=25, **NULLABLE, verbose_name='номер телефона')
+    city = models.CharField(max_length=50, **NULLABLE, verbose_name='город')
     avatar = models.ImageField(upload_to='users/', verbose_name='аватар', **NULLABLE)
 
     USERNAME_FIELD = 'email'

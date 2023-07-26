@@ -9,6 +9,7 @@ https://docs.djangoproject.com/en/4.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
+import os
 from datetime import timedelta
 from pathlib import Path
 
@@ -35,6 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_celery_beat',
     'drf_yasg',
     'course_app',
     'django_filters',
@@ -93,11 +95,11 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'course_db',
-        'HOST': 'localhost',
-        'PORT': '5432',
-        'USER': 'postgres',
-        'PASSWORD': 'B@nkin1993'
+        'NAME': os.getenv('DB_NAME'),
+        'HOST': os.getenv('DB_HOST'),
+        'PORT': os.getenv('DB_PORT'),
+        'USER': os.getenv('DB_USER'),
+        'PASSWORD': os.getenv('DB_PASSWORD')
     }
 }
 
@@ -124,7 +126,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = "ru"
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Europe/Moscow'
 
 USE_I18N = True
 
@@ -165,5 +167,15 @@ SIMPLE_JWT = {
     'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
 }
 
-STRIPE_SECRET_KEY = 'sk_test_51NVHD6GRIHclJ1YSDHjRGCgbIMMgH63LzoEJM58vfxTd9xrmKpxdRgOAccbbczewLT8LaJIOyiWypFp56WumYeep00VOAcXmZY'
-STRIPE_PUBLIC_KEY = 'pk_test_51NVHD6GRIHclJ1YSVTKxjBdABj8i7KNlaJR726pLUGTWamg3j7BsGKkcA1CbgYpcPEA1ZNs1hXwsSeoKYa3gRU7C00Lo31d6v7'
+STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY')
+
+CELERY_BROKER_URL = 'redis://localhost:6379/0'
+CELERY_RESULT_BACKEND = 'redis://localhost:6379'
+CELERY_BEAT_SCHEDULER = 'django_celery_beat.schedulers:DatabaseScheduler'
+CELERY_TIMEZONE = 'Europe/Moscow'
+
+EMAIL_HOST = 'smtp.yandex.ru'
+EMAIL_PORT = 465
+EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
+EMAIL_USE_SSL = True

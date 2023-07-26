@@ -458,6 +458,89 @@
   }
 },
 {
+  "model": "django_celery_beat.intervalschedule",
+  "pk": 1,
+  "fields": {
+    "every": 10,
+    "period": "seconds"
+  }
+},
+{
+  "model": "django_celery_beat.crontabschedule",
+  "pk": 1,
+  "fields": {
+    "minute": "0",
+    "hour": "4",
+    "day_of_week": "*",
+    "day_of_month": "*",
+    "month_of_year": "*",
+    "timezone": "Europe/Moscow"
+  }
+},
+{
+  "model": "django_celery_beat.periodictasks",
+  "pk": 1,
+  "fields": {
+    "last_update": "2023-07-26T17:37:28.738Z"
+  }
+},
+{
+  "model": "django_celery_beat.periodictask",
+  "pk": 1,
+  "fields": {
+    "name": "celery.backend_cleanup",
+    "task": "celery.backend_cleanup",
+    "interval": null,
+    "crontab": 1,
+    "solar": null,
+    "clocked": null,
+    "args": "[]",
+    "kwargs": "{}",
+    "queue": null,
+    "exchange": null,
+    "routing_key": null,
+    "headers": "{}",
+    "priority": null,
+    "expires": null,
+    "expire_seconds": 43200,
+    "one_off": false,
+    "start_time": null,
+    "enabled": true,
+    "last_run_at": null,
+    "total_run_count": 0,
+    "date_changed": "2023-07-26T17:22:38.630Z",
+    "description": ""
+  }
+},
+{
+  "model": "django_celery_beat.periodictask",
+  "pk": 2,
+  "fields": {
+    "name": "Check payment status",
+    "task": "course_app.tasks.check_status_payment",
+    "interval": 1,
+    "crontab": null,
+    "solar": null,
+    "clocked": null,
+    "args": "[]",
+    "kwargs": "{}",
+    "queue": null,
+    "exchange": null,
+    "routing_key": null,
+    "headers": "{}",
+    "priority": null,
+    "expires": "2023-07-26T17:37:58.670Z",
+    "expire_seconds": null,
+    "one_off": false,
+    "start_time": null,
+    "enabled": true,
+    "last_run_at": "2023-07-26T17:44:12.875Z",
+    "total_run_count": 40,
+    "date_changed": "2023-07-26T17:44:22.014Z",
+    "description": ""
+  }
+},
+{
   "model": "course_app.course",
   "pk": 1,
   "fields": {
@@ -465,6 +548,7 @@
     "preview": "",
     "description": "cool",
     "price": 5000,
+    "last_update": null,
     "user": 3
   }
 },
@@ -474,8 +558,9 @@
   "fields": {
     "name": "course_test_2",
     "preview": "",
-    "description": "norm",
+    "description": "ВАУ СУПЕР!!!!",
     "price": 5000,
+    "last_update": null,
     "user": 1
   }
 },
@@ -487,6 +572,7 @@
     "preview": "course/Снимок_экрана_3491.png",
     "description": "Ничего не понятно, но очень интересно!",
     "price": 5000,
+    "last_update": "2023-07-26T15:50:59.825Z",
     "user": 1
   }
 },
@@ -498,6 +584,7 @@
     "preview": "course/1111-072.jpeg",
     "description": "самый вау курс!",
     "price": 5000,
+    "last_update": "2023-07-26T13:47:02.943Z",
     "user": 1
   }
 },
@@ -509,6 +596,7 @@
     "preview": "",
     "description": "так себе",
     "price": 5000,
+    "last_update": null,
     "user": 3
   }
 },
@@ -520,6 +608,7 @@
     "preview": "",
     "description": "орк5!",
     "price": 5000,
+    "last_update": null,
     "user": null
   }
 },
@@ -564,7 +653,7 @@
   "pk": 4,
   "fields": {
     "name": "Manager",
-    "description": "СУПер урок",
+    "description": "Супер урок!!",
     "preview": "",
     "video": null,
     "course": 3,
@@ -1312,6 +1401,70 @@
   }
 },
 {
+  "model": "course_app.payments",
+  "pk": 42,
+  "fields": {
+    "user": 2,
+    "payment_date": "2023-07-26",
+    "paid_course": 3,
+    "paid_lesson": null,
+    "payment_amount": 5000,
+    "method_payment": "cash",
+    "payment_intent_id": "pi_3NY4SCGRIHclJ1YS0t0QYodr",
+    "payment_method_id": "pm_1NY4TSGRIHclJ1YSC68c0kBU",
+    "status": "succeeded",
+    "confirmation": false
+  }
+},
+{
+  "model": "course_app.payments",
+  "pk": 43,
+  "fields": {
+    "user": 1,
+    "payment_date": "2023-07-26",
+    "paid_course": 2,
+    "paid_lesson": null,
+    "payment_amount": 5000,
+    "method_payment": "cash",
+    "payment_intent_id": "pi_3NY4onGRIHclJ1YS3jRSRUBP",
+    "payment_method_id": "pm_1NY4pBGRIHclJ1YSFY2IM3jF",
+    "status": "succeeded",
+    "confirmation": false
+  }
+},
+{
+  "model": "course_app.payments",
+  "pk": 44,
+  "fields": {
+    "user": 1,
+    "payment_date": "2023-07-26",
+    "paid_course": 3,
+    "paid_lesson": null,
+    "payment_amount": 5000,
+    "method_payment": "cash",
+    "payment_intent_id": "pi_3NY9xhGRIHclJ1YS0I1wQept",
+    "payment_method_id": "pm_1NY9yBGRIHclJ1YS8r0s4meB",
+    "status": "succeeded",
+    "confirmation": false
+  }
+},
+{
+  "model": "course_app.payments",
+  "pk": 45,
+  "fields": {
+    "user": 1,
+    "payment_date": "2023-07-26",
+    "paid_course": 2,
+    "paid_lesson": null,
+    "payment_amount": 5000,
+    "method_payment": "transfer",
+    "payment_intent_id": "pi_3NYBjRGRIHclJ1YS3ovrkW1m",
+    "payment_method_id": "pm_1NYBjgGRIHclJ1YSb0YJQnXT",
+    "status": "succeeded",
+    "confirmation": false
+  }
+},
+{
   "model": "course_app.subscription",
   "pk": 1,
   "fields": {
@@ -1349,6 +1502,46 @@
     "user": 1,
     "payment": 1,
     "status": false
+  }
+},
+{
+  "model": "course_app.subscription",
+  "pk": 12,
+  "fields": {
+    "course": 3,
+    "user": 2,
+    "payment": 42,
+    "status": true
+  }
+},
+{
+  "model": "course_app.subscription",
+  "pk": 13,
+  "fields": {
+    "course": 2,
+    "user": 1,
+    "payment": 43,
+    "status": true
+  }
+},
+{
+  "model": "course_app.subscription",
+  "pk": 14,
+  "fields": {
+    "course": 3,
+    "user": 1,
+    "payment": 44,
+    "status": true
+  }
+},
+{
+  "model": "course_app.subscription",
+  "pk": 15,
+  "fields": {
+    "course": 2,
+    "user": 1,
+    "payment": 45,
+    "status": true
   }
 },
 {

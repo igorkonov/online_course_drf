@@ -1,7 +1,7 @@
 from rest_framework import serializers
 
 from course_app.models import Course, Lesson, Subscription, Payments
-from course_app.validators import VideoValidator, CourseIdValidator
+from course_app.validators import VideoValidator
 
 
 class LessonSerializer(serializers.ModelSerializer):
@@ -59,7 +59,7 @@ class SubscriptionSerializer(serializers.ModelSerializer):
 
 
 class PaymentIntentCreateSerializer(serializers.Serializer):
-    course_id = serializers.IntegerField(validators=[CourseIdValidator(field='course_id')])
+    course_id = serializers.PrimaryKeyRelatedField(source='course', queryset=Course.objects.all())
 
 
 class PaymentMethodCreateSerializer(serializers.Serializer):

@@ -5,7 +5,7 @@ from course_app.models import Course, Lesson, Subscription
 
 @admin.register(Course)
 class CourseAdmin(admin.ModelAdmin):
-    list_display = ('id', 'name', 'preview', 'description', 'user')
+    list_display = ('id', 'name', 'preview', 'description', 'user', 'last_update')
 
 
 @admin.register(Lesson)

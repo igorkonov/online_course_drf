@@ -1,5 +1,6 @@
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import viewsets, generics, status
+from rest_framework.exceptions import APIException
 from rest_framework.filters import OrderingFilter
 from rest_framework.permissions import IsAdminUser
 from rest_framework.response import Response
@@ -10,6 +11,7 @@ from course_app.permissions import IsOwner, IsModerator
 from course_app.serializers import CourseSerializer, LessonSerializer, SubscriptionSerializer, \
     PaymentIntentCreateSerializer, PaymentMethodCreateSerializer, PaymentIntentConfirmSerializer
 from course_app.services import StripeService
+from course_app.tasks import notify_course_updates, notify_lesson_updates
 from users.serializers import PaymentSerializer
 
 
@@ -18,6 +20,10 @@ class CourseViewSet(viewsets.ModelViewSet):
     serializer_class = CourseSerializer
     queryset = Course.objects.all()
     permission_classes = [IsAdminUser | IsModerator | IsOwner]
+
+    def perform_update(self, serializer):
+        self.object = serializer.save()
+        notify_course_updates.delay(self.object.pk)
 
 
 class LessonListView(generics.ListAPIView):
@@ -53,6 +59,10 @@ class LessonUpdateView(generics.UpdateAPIView):
     queryset = Lesson.objects.all()
     permission_classes = [IsModerator | IsOwner]
 
+    def perform_update(self, serializer):
+        self.object = serializer.save()
+        notify_lesson_updates.delay(self.object.pk)
+
 
 class PaymentListView(generics.ListAPIView):
     serializer_class = PaymentSerializer
@@ -79,21 +89,32 @@ class SubscriptionDeleteView(generics.DestroyAPIView):
     queryset = Subscription.objects.all()
 
 
+class StripeServiceError(APIException):
+    status_code = 400
+    default_detail = 'Ошибка сервиса Stripe'
+    default_code = 'stripe_error'
+
+
 class PaymentIntentCreateView(generics.CreateAPIView):
     def post(self, request, *args, **kwargs):
         serializer = PaymentIntentCreateSerializer(data=request.data)
-        if serializer.is_valid():
-            course_id = serializer.validated_data['course_id']
-            user_id = request.user.id
-            try:
-                payment_intent = StripeService.create_payment_intent(course_id, user_id)
-                payment = Payments.objects.get(payment_intent_id=payment_intent['id'])
-                payment_serializer = PaymentSerializer(payment)
-                return Response(payment_serializer.data, status=status.HTTP_201_CREATED)
-            except Exception as e:
-                return Response({'error': str(e)}, status=status.HTTP_400_BAD_REQUEST)
+        serializer.is_valid(raise_exception=True)
+        try:
+            course = serializer.validated_data['course']
+            user_id = request.user
 
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+            payment_intent = StripeService.create_payment_intent(course, user_id)
+            payment = Payments.objects.get(payment_intent_id=payment_intent['id'])
+        except StripeServiceError as e:
+            raise StripeServiceError(detail=str(e))
+
+        except Payments.DoesNotExist:
+            raise APIException(detail='Платеж не найден')
+        else:
+            data = PaymentSerializer(payment).data
+            status_code = status.HTTP_201_CREATED
+
+            return Response(data, status=status_code)
 
 
 class PaymentMethodCreateView(generics.CreateAPIView):
