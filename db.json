@@ -1,0 +1,1614 @@
+[
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2023-07-10T13:47:05.321Z",
+    "user": 2,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "igorkonov1993@gmail.com - 89202005060: Obninsk",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Password\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2023-07-10T15:00:23.545Z",
+    "user": 2,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "igorkonov1993@gmail.com - 89202005060: Obninsk",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"password\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2023-07-11T11:03:40.160Z",
+    "user": 2,
+    "content_type": 8,
+    "object_id": "3",
+    "object_repr": "test@mail.ru - 65767657: zanuda",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2023-07-11T12:14:05.158Z",
+    "user": 2,
+    "content_type": 8,
+    "object_id": "3",
+    "object_repr": "test@mail.ru - 65767657: zanuda",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2023-07-11T12:15:14.239Z",
+    "user": 2,
+    "content_type": 6,
+    "object_id": "3",
+    "object_repr": "курс",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2023-07-11T12:16:58.510Z",
+    "user": 2,
+    "content_type": 6,
+    "object_id": "4",
+    "object_repr": "курс вау!",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2023-07-11T12:19:49.833Z",
+    "user": 2,
+    "content_type": 7,
+    "object_id": "3",
+    "object_repr": "Человечить паучить",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2023-07-11T12:22:03.234Z",
+    "user": 2,
+    "content_type": 7,
+    "object_id": "4",
+    "object_repr": "Manager",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2023-07-11T12:23:08.500Z",
+    "user": 2,
+    "content_type": 7,
+    "object_id": "4",
+    "object_repr": "Manager",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2023-07-11T12:37:38.581Z",
+    "user": 2,
+    "content_type": 6,
+    "object_id": "5",
+    "object_repr": "ниочем",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2023-07-11T12:38:02.056Z",
+    "user": 2,
+    "content_type": 6,
+    "object_id": "4",
+    "object_repr": "курс вау!",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0410\\u0432\\u0442\\u043e\\u0440\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2023-07-11T12:38:09.883Z",
+    "user": 2,
+    "content_type": 6,
+    "object_id": "3",
+    "object_repr": "курс",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0410\\u0432\\u0442\\u043e\\u0440\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2023-07-11T12:39:21.406Z",
+    "user": 2,
+    "content_type": 6,
+    "object_id": "2",
+    "object_repr": "course_test_2",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0410\\u0432\\u0442\\u043e\\u0440\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2023-07-11T12:39:29.782Z",
+    "user": 2,
+    "content_type": 6,
+    "object_id": "1",
+    "object_repr": "course_test",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0410\\u0432\\u0442\\u043e\\u0440\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2023-07-13T17:05:43.621Z",
+    "user": 2,
+    "content_type": 8,
+    "object_id": "3",
+    "object_repr": "test@mail.ru - 65767657: zanuda!",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"User permissions\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2023-07-13T17:05:54.649Z",
+    "user": 2,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "igorkonov1993@gmail.com - 89202005060: Obninsk",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2023-07-13T17:37:40.457Z",
+    "user": 2,
+    "content_type": 8,
+    "object_id": "3",
+    "object_repr": "test@mail.ru - 65767657: zanuda!",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Staff status\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2023-07-13T17:42:25.293Z",
+    "user": 2,
+    "content_type": 7,
+    "object_id": "11",
+    "object_repr": "Oрк5!",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0421\\u0441\\u044b\\u043b\\u043a\\u0430 \\u043d\\u0430 \\u0432\\u0438\\u0434\\u0435\\u043e\", \"\\u041a\\u0443\\u0440\\u0441\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2023-07-13T19:23:38.510Z",
+    "user": 2,
+    "content_type": 10,
+    "object_id": "1",
+    "object_repr": "super@mail.ru - :  - ниочем: True",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 20,
+  "fields": {
+    "action_time": "2023-07-13T19:58:05.469Z",
+    "user": 2,
+    "content_type": 10,
+    "object_id": "2",
+    "object_repr": "igorkonov1993@gmail.com - 89202005060: Obninsk - курс вау!: True",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 21,
+  "fields": {
+    "action_time": "2023-07-24T17:53:00.302Z",
+    "user": 2,
+    "content_type": 7,
+    "object_id": "11",
+    "object_repr": "Oрк5!",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 22,
+  "fields": {
+    "action_time": "2023-07-24T17:53:03.578Z",
+    "user": 2,
+    "content_type": 7,
+    "object_id": "12",
+    "object_repr": "Орк6!!!!",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 23,
+  "fields": {
+    "action_time": "2023-07-24T17:53:09.854Z",
+    "user": 2,
+    "content_type": 7,
+    "object_id": "9",
+    "object_repr": "Урок8",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 24,
+  "fields": {
+    "action_time": "2023-07-24T17:53:12.887Z",
+    "user": 2,
+    "content_type": 7,
+    "object_id": "8",
+    "object_repr": "Урок7",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 25,
+  "fields": {
+    "action_time": "2023-07-24T17:53:15.742Z",
+    "user": 2,
+    "content_type": 7,
+    "object_id": "7",
+    "object_repr": "Урок6",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 26,
+  "fields": {
+    "action_time": "2023-07-24T17:53:18.471Z",
+    "user": 2,
+    "content_type": 7,
+    "object_id": "6",
+    "object_repr": "Урок5!",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 27,
+  "fields": {
+    "action_time": "2023-07-24T17:53:21.363Z",
+    "user": 2,
+    "content_type": 7,
+    "object_id": "5",
+    "object_repr": "Урок4",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 28,
+  "fields": {
+    "action_time": "2023-07-24T17:53:24.399Z",
+    "user": 2,
+    "content_type": 7,
+    "object_id": "4",
+    "object_repr": "Manager",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 29,
+  "fields": {
+    "action_time": "2023-07-24T17:53:26.825Z",
+    "user": 2,
+    "content_type": 7,
+    "object_id": "4",
+    "object_repr": "Manager",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 30,
+  "fields": {
+    "action_time": "2023-07-24T17:53:31.097Z",
+    "user": 2,
+    "content_type": 7,
+    "object_id": "3",
+    "object_repr": "Человечить паучить",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 31,
+  "fields": {
+    "action_time": "2023-07-24T17:53:33.977Z",
+    "user": 2,
+    "content_type": 7,
+    "object_id": "3",
+    "object_repr": "Человечить паучить",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 32,
+  "fields": {
+    "action_time": "2023-07-24T17:53:36.965Z",
+    "user": 2,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "Урок_1",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 33,
+  "fields": {
+    "action_time": "2023-07-24T17:53:39.595Z",
+    "user": 2,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "Урок",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 34,
+  "fields": {
+    "action_time": "2023-07-24T18:35:49.349Z",
+    "user": 2,
+    "content_type": 10,
+    "object_id": "2",
+    "object_repr": "igorkonov1993@gmail.com - 89202005060: Obninsk - курс вау!: True",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "c2gpvm6d3f6wozvslylrxr2vwfaymo6w",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSFDmaHFpXu_gQwwlaqBpI-V8d-1SRe6veec-1KBt7WEbZE5TFmdVadOv1vk9JC6g3znems6tbrOU9S7og-66GvL8rwc7t9B4aV8a0gmEqLHDqztOI-WPQAZ6sVAHP1AgOj6HJEcWWJk3B03ehFIg1XvD7L1NwI:1qIsND:1W9Gy-JznXBIcVDh28sM1QDmW17Xi2ZyTsF9sYsNWVk",
+    "expire_date": "2023-07-24T15:00:23.552Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "vz6upgeux8lgsavf1k421tv8chh9k06z",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSFDmaHFpXu_gQwwlaqBpI-V8d-1SRe6veec-1KBt7WEbZE5TFmdVadOv1vk9JC6g3znems6tbrOU9S7og-66GvL8rwc7t9B4aV8a0gmEqLHDqztOI-WPQAZ6sVAHP1AgOj6HJEcWWJk3B03ehFIg1XvD7L1NwI:1qNzjV:0rHlatCW9PwKbjBQQmaxCGLykAxVB656qvHgKCdf8ug",
+    "expire_date": "2023-08-07T17:52:33.976Z"
+  }
+},
+{
+  "model": "django_celery_beat.intervalschedule",
+  "pk": 1,
+  "fields": {
+    "every": 10,
+    "period": "seconds"
+  }
+},
+{
+  "model": "django_celery_beat.crontabschedule",
+  "pk": 1,
+  "fields": {
+    "minute": "0",
+    "hour": "4",
+    "day_of_week": "*",
+    "day_of_month": "*",
+    "month_of_year": "*",
+    "timezone": "Europe/Moscow"
+  }
+},
+{
+  "model": "django_celery_beat.periodictasks",
+  "pk": 1,
+  "fields": {
+    "last_update": "2023-07-26T17:37:28.738Z"
+  }
+},
+{
+  "model": "django_celery_beat.periodictask",
+  "pk": 1,
+  "fields": {
+    "name": "celery.backend_cleanup",
+    "task": "celery.backend_cleanup",
+    "interval": null,
+    "crontab": 1,
+    "solar": null,
+    "clocked": null,
+    "args": "[]",
+    "kwargs": "{}",
+    "queue": null,
+    "exchange": null,
+    "routing_key": null,
+    "headers": "{}",
+    "priority": null,
+    "expires": null,
+    "expire_seconds": 43200,
+    "one_off": false,
+    "start_time": null,
+    "enabled": true,
+    "last_run_at": null,
+    "total_run_count": 0,
+    "date_changed": "2023-07-26T17:22:38.630Z",
+    "description": ""
+  }
+},
+{
+  "model": "django_celery_beat.periodictask",
+  "pk": 2,
+  "fields": {
+    "name": "Check payment status",
+    "task": "course_app.tasks.check_status_payment",
+    "interval": 1,
+    "crontab": null,
+    "solar": null,
+    "clocked": null,
+    "args": "[]",
+    "kwargs": "{}",
+    "queue": null,
+    "exchange": null,
+    "routing_key": null,
+    "headers": "{}",
+    "priority": null,
+    "expires": "2023-07-26T17:37:58.670Z",
+    "expire_seconds": null,
+    "one_off": false,
+    "start_time": null,
+    "enabled": true,
+    "last_run_at": "2023-07-26T17:44:12.875Z",
+    "total_run_count": 40,
+    "date_changed": "2023-07-26T17:44:22.014Z",
+    "description": ""
+  }
+},
+{
+  "model": "course_app.course",
+  "pk": 1,
+  "fields": {
+    "name": "course_test",
+    "preview": "",
+    "description": "cool",
+    "price": 5000,
+    "last_update": null,
+    "user": 3
+  }
+},
+{
+  "model": "course_app.course",
+  "pk": 2,
+  "fields": {
+    "name": "course_test_2",
+    "preview": "",
+    "description": "ВАУ СУПЕР!!!!",
+    "price": 5000,
+    "last_update": null,
+    "user": 1
+  }
+},
+{
+  "model": "course_app.course",
+  "pk": 3,
+  "fields": {
+    "name": "курс!",
+    "preview": "course/Снимок_экрана_3491.png",
+    "description": "Ничего не понятно, но очень интересно!",
+    "price": 5000,
+    "last_update": "2023-07-26T15:50:59.825Z",
+    "user": 1
+  }
+},
+{
+  "model": "course_app.course",
+  "pk": 4,
+  "fields": {
+    "name": "курс вау!",
+    "preview": "course/1111-072.jpeg",
+    "description": "самый вау курс!",
+    "price": 5000,
+    "last_update": "2023-07-26T13:47:02.943Z",
+    "user": 1
+  }
+},
+{
+  "model": "course_app.course",
+  "pk": 5,
+  "fields": {
+    "name": "ниочем",
+    "preview": "",
+    "description": "так себе",
+    "price": 5000,
+    "last_update": null,
+    "user": 3
+  }
+},
+{
+  "model": "course_app.course",
+  "pk": 6,
+  "fields": {
+    "name": "Курс5!",
+    "preview": "",
+    "description": "орк5!",
+    "price": 5000,
+    "last_update": null,
+    "user": null
+  }
+},
+{
+  "model": "course_app.lesson",
+  "pk": 1,
+  "fields": {
+    "name": "Урок",
+    "description": "Test",
+    "preview": "",
+    "video": null,
+    "course": null,
+    "user": null
+  }
+},
+{
+  "model": "course_app.lesson",
+  "pk": 2,
+  "fields": {
+    "name": "Урок_1",
+    "description": "Test_1",
+    "preview": "",
+    "video": null,
+    "course": 1,
+    "user": null
+  }
+},
+{
+  "model": "course_app.lesson",
+  "pk": 3,
+  "fields": {
+    "name": "Человечить паучить",
+    "description": "Научимся паутинить и лазить по стенам",
+    "preview": "lesson/orig.webp",
+    "video": "https://www.youtube.com/watch?v=BDql-2lrvLA&ab_channel=MoViewTimel%D0%BE%D0%A1%D1%83%D0%BF%D0%B5%D1%80%D0%B3%D0%B5%D1%80%D0%BE%D1%8F%D1%85%D0%B8%D0%9A%D0%B8%D0%BD%D0%BE",
+    "course": 4,
+    "user": null
+  }
+},
+{
+  "model": "course_app.lesson",
+  "pk": 4,
+  "fields": {
+    "name": "Manager",
+    "description": "Супер урок!!",
+    "preview": "",
+    "video": null,
+    "course": 3,
+    "user": null
+  }
+},
+{
+  "model": "course_app.lesson",
+  "pk": 5,
+  "fields": {
+    "name": "Урок4",
+    "description": "Test4",
+    "preview": "",
+    "video": null,
+    "course": null,
+    "user": null
+  }
+},
+{
+  "model": "course_app.lesson",
+  "pk": 6,
+  "fields": {
+    "name": "Урок5!",
+    "description": "Test5!",
+    "preview": "",
+    "video": null,
+    "course": null,
+    "user": null
+  }
+},
+{
+  "model": "course_app.lesson",
+  "pk": 7,
+  "fields": {
+    "name": "Урок6",
+    "description": "Test6",
+    "preview": "",
+    "video": null,
+    "course": null,
+    "user": null
+  }
+},
+{
+  "model": "course_app.lesson",
+  "pk": 8,
+  "fields": {
+    "name": "Урок7",
+    "description": "Test7",
+    "preview": "",
+    "video": null,
+    "course": null,
+    "user": null
+  }
+},
+{
+  "model": "course_app.lesson",
+  "pk": 9,
+  "fields": {
+    "name": "Урок8",
+    "description": "Test8",
+    "preview": "",
+    "video": null,
+    "course": null,
+    "user": null
+  }
+},
+{
+  "model": "course_app.lesson",
+  "pk": 11,
+  "fields": {
+    "name": "Oрк5!",
+    "description": "орк5!",
+    "preview": "",
+    "video": "https://www.youtube.com/watch?v=3Tk6Z6cmxJ4&ab_channel=R%C3%A9myM%C3%A9tailler",
+    "course": 5,
+    "user": 2
+  }
+},
+{
+  "model": "course_app.lesson",
+  "pk": 12,
+  "fields": {
+    "name": "Орк6!!!!",
+    "description": "орк6!",
+    "preview": "",
+    "video": "https://www.youtube.com/watch?v=mb6MYovtioY&ab_channel=RedBullBike",
+    "course": null,
+    "user": 2
+  }
+},
+{
+  "model": "course_app.payments",
+  "pk": 1,
+  "fields": {
+    "user": 1,
+    "payment_date": "2023-07-07",
+    "paid_course": 1,
+    "paid_lesson": null,
+    "payment_amount": 45000,
+    "method_payment": "cash",
+    "payment_intent_id": null,
+    "payment_method_id": null,
+    "status": null,
+    "confirmation": false
+  }
+},
+{
+  "model": "course_app.payments",
+  "pk": 2,
+  "fields": {
+    "user": 1,
+    "payment_date": "2023-07-07",
+    "paid_course": null,
+    "paid_lesson": 1,
+    "payment_amount": 5000,
+    "method_payment": "transfer",
+    "payment_intent_id": null,
+    "payment_method_id": null,
+    "status": null,
+    "confirmation": false
+  }
+},
+{
+  "model": "course_app.payments",
+  "pk": 3,
+  "fields": {
+    "user": null,
+    "payment_date": "2023-07-18",
+    "paid_course": 3,
+    "paid_lesson": null,
+    "payment_amount": 60000,
+    "method_payment": "cash",
+    "payment_intent_id": null,
+    "payment_method_id": null,
+    "status": null,
+    "confirmation": false
+  }
+},
+{
+  "model": "course_app.payments",
+  "pk": 4,
+  "fields": {
+    "user": 2,
+    "payment_date": "2023-07-21",
+    "paid_course": 1,
+    "paid_lesson": null,
+    "payment_amount": 500000,
+    "method_payment": "cash",
+    "payment_intent_id": null,
+    "payment_method_id": null,
+    "status": null,
+    "confirmation": false
+  }
+},
+{
+  "model": "course_app.payments",
+  "pk": 5,
+  "fields": {
+    "user": 2,
+    "payment_date": "2023-07-21",
+    "paid_course": 1,
+    "paid_lesson": null,
+    "payment_amount": 500000,
+    "method_payment": "cash",
+    "payment_intent_id": null,
+    "payment_method_id": null,
+    "status": null,
+    "confirmation": false
+  }
+},
+{
+  "model": "course_app.payments",
+  "pk": 6,
+  "fields": {
+    "user": 2,
+    "payment_date": "2023-07-21",
+    "paid_course": 1,
+    "paid_lesson": null,
+    "payment_amount": 500000,
+    "method_payment": "cash",
+    "payment_intent_id": null,
+    "payment_method_id": null,
+    "status": null,
+    "confirmation": false
+  }
+},
+{
+  "model": "course_app.payments",
+  "pk": 7,
+  "fields": {
+    "user": 2,
+    "payment_date": "2023-07-21",
+    "paid_course": 1,
+    "paid_lesson": null,
+    "payment_amount": 500000,
+    "method_payment": "cash",
+    "payment_intent_id": null,
+    "payment_method_id": null,
+    "status": null,
+    "confirmation": false
+  }
+},
+{
+  "model": "course_app.payments",
+  "pk": 8,
+  "fields": {
+    "user": 2,
+    "payment_date": "2023-07-21",
+    "paid_course": 1,
+    "paid_lesson": null,
+    "payment_amount": 500000,
+    "method_payment": "cash",
+    "payment_intent_id": null,
+    "payment_method_id": null,
+    "status": null,
+    "confirmation": false
+  }
+},
+{
+  "model": "course_app.payments",
+  "pk": 9,
+  "fields": {
+    "user": 2,
+    "payment_date": "2023-07-21",
+    "paid_course": 1,
+    "paid_lesson": null,
+    "payment_amount": 500000,
+    "method_payment": "cash",
+    "payment_intent_id": null,
+    "payment_method_id": null,
+    "status": null,
+    "confirmation": false
+  }
+},
+{
+  "model": "course_app.payments",
+  "pk": 10,
+  "fields": {
+    "user": 2,
+    "payment_date": "2023-07-21",
+    "paid_course": 1,
+    "paid_lesson": null,
+    "payment_amount": 500000,
+    "method_payment": "cash",
+    "payment_intent_id": null,
+    "payment_method_id": null,
+    "status": null,
+    "confirmation": false
+  }
+},
+{
+  "model": "course_app.payments",
+  "pk": 11,
+  "fields": {
+    "user": 2,
+    "payment_date": "2023-07-21",
+    "paid_course": 1,
+    "paid_lesson": null,
+    "payment_amount": 500000,
+    "method_payment": "cash",
+    "payment_intent_id": null,
+    "payment_method_id": null,
+    "status": null,
+    "confirmation": false
+  }
+},
+{
+  "model": "course_app.payments",
+  "pk": 12,
+  "fields": {
+    "user": 2,
+    "payment_date": "2023-07-21",
+    "paid_course": 1,
+    "paid_lesson": null,
+    "payment_amount": 500000,
+    "method_payment": "cash",
+    "payment_intent_id": null,
+    "payment_method_id": null,
+    "status": null,
+    "confirmation": false
+  }
+},
+{
+  "model": "course_app.payments",
+  "pk": 13,
+  "fields": {
+    "user": 2,
+    "payment_date": "2023-07-21",
+    "paid_course": 1,
+    "paid_lesson": null,
+    "payment_amount": 500000,
+    "method_payment": "cash",
+    "payment_intent_id": null,
+    "payment_method_id": null,
+    "status": null,
+    "confirmation": false
+  }
+},
+{
+  "model": "course_app.payments",
+  "pk": 14,
+  "fields": {
+    "user": 2,
+    "payment_date": "2023-07-21",
+    "paid_course": 1,
+    "paid_lesson": null,
+    "payment_amount": 500000,
+    "method_payment": "cash",
+    "payment_intent_id": null,
+    "payment_method_id": null,
+    "status": null,
+    "confirmation": false
+  }
+},
+{
+  "model": "course_app.payments",
+  "pk": 15,
+  "fields": {
+    "user": 2,
+    "payment_date": "2023-07-21",
+    "paid_course": 1,
+    "paid_lesson": null,
+    "payment_amount": 500000,
+    "method_payment": "cash",
+    "payment_intent_id": null,
+    "payment_method_id": null,
+    "status": null,
+    "confirmation": false
+  }
+},
+{
+  "model": "course_app.payments",
+  "pk": 16,
+  "fields": {
+    "user": 2,
+    "payment_date": "2023-07-21",
+    "paid_course": 1,
+    "paid_lesson": null,
+    "payment_amount": 500000,
+    "method_payment": "cash",
+    "payment_intent_id": null,
+    "payment_method_id": null,
+    "status": null,
+    "confirmation": false
+  }
+},
+{
+  "model": "course_app.payments",
+  "pk": 17,
+  "fields": {
+    "user": 2,
+    "payment_date": "2023-07-21",
+    "paid_course": 1,
+    "paid_lesson": null,
+    "payment_amount": 500000,
+    "method_payment": "cash",
+    "payment_intent_id": null,
+    "payment_method_id": null,
+    "status": null,
+    "confirmation": false
+  }
+},
+{
+  "model": "course_app.payments",
+  "pk": 18,
+  "fields": {
+    "user": 2,
+    "payment_date": "2023-07-21",
+    "paid_course": 1,
+    "paid_lesson": null,
+    "payment_amount": 500000,
+    "method_payment": "cash",
+    "payment_intent_id": null,
+    "payment_method_id": null,
+    "status": null,
+    "confirmation": false
+  }
+},
+{
+  "model": "course_app.payments",
+  "pk": 19,
+  "fields": {
+    "user": 2,
+    "payment_date": "2023-07-21",
+    "paid_course": 1,
+    "paid_lesson": null,
+    "payment_amount": 500000,
+    "method_payment": "cash",
+    "payment_intent_id": null,
+    "payment_method_id": null,
+    "status": null,
+    "confirmation": false
+  }
+},
+{
+  "model": "course_app.payments",
+  "pk": 20,
+  "fields": {
+    "user": 2,
+    "payment_date": "2023-07-21",
+    "paid_course": 1,
+    "paid_lesson": null,
+    "payment_amount": 500000,
+    "method_payment": "cash",
+    "payment_intent_id": null,
+    "payment_method_id": null,
+    "status": null,
+    "confirmation": false
+  }
+},
+{
+  "model": "course_app.payments",
+  "pk": 21,
+  "fields": {
+    "user": 2,
+    "payment_date": "2023-07-21",
+    "paid_course": 1,
+    "paid_lesson": null,
+    "payment_amount": 500000,
+    "method_payment": "cash",
+    "payment_intent_id": null,
+    "payment_method_id": null,
+    "status": null,
+    "confirmation": false
+  }
+},
+{
+  "model": "course_app.payments",
+  "pk": 22,
+  "fields": {
+    "user": 2,
+    "payment_date": "2023-07-21",
+    "paid_course": 1,
+    "paid_lesson": null,
+    "payment_amount": 500000,
+    "method_payment": "cash",
+    "payment_intent_id": null,
+    "payment_method_id": null,
+    "status": null,
+    "confirmation": false
+  }
+},
+{
+  "model": "course_app.payments",
+  "pk": 23,
+  "fields": {
+    "user": 2,
+    "payment_date": "2023-07-23",
+    "paid_course": 1,
+    "paid_lesson": null,
+    "payment_amount": 500000,
+    "method_payment": "cash",
+    "payment_intent_id": null,
+    "payment_method_id": null,
+    "status": null,
+    "confirmation": false
+  }
+},
+{
+  "model": "course_app.payments",
+  "pk": 24,
+  "fields": {
+    "user": 2,
+    "payment_date": "2023-07-23",
+    "paid_course": 1,
+    "paid_lesson": null,
+    "payment_amount": 500000,
+    "method_payment": "cash",
+    "payment_intent_id": null,
+    "payment_method_id": null,
+    "status": null,
+    "confirmation": false
+  }
+},
+{
+  "model": "course_app.payments",
+  "pk": 25,
+  "fields": {
+    "user": 2,
+    "payment_date": "2023-07-23",
+    "paid_course": 1,
+    "paid_lesson": null,
+    "payment_amount": 500000,
+    "method_payment": "cash",
+    "payment_intent_id": null,
+    "payment_method_id": null,
+    "status": null,
+    "confirmation": false
+  }
+},
+{
+  "model": "course_app.payments",
+  "pk": 26,
+  "fields": {
+    "user": 2,
+    "payment_date": "2023-07-23",
+    "paid_course": 1,
+    "paid_lesson": null,
+    "payment_amount": 500000,
+    "method_payment": "cash",
+    "payment_intent_id": null,
+    "payment_method_id": null,
+    "status": null,
+    "confirmation": false
+  }
+},
+{
+  "model": "course_app.payments",
+  "pk": 27,
+  "fields": {
+    "user": 2,
+    "payment_date": "2023-07-23",
+    "paid_course": 1,
+    "paid_lesson": null,
+    "payment_amount": 500000,
+    "method_payment": "cash",
+    "payment_intent_id": null,
+    "payment_method_id": null,
+    "status": null,
+    "confirmation": false
+  }
+},
+{
+  "model": "course_app.payments",
+  "pk": 28,
+  "fields": {
+    "user": 2,
+    "payment_date": "2023-07-23",
+    "paid_course": 1,
+    "paid_lesson": null,
+    "payment_amount": 500000,
+    "method_payment": "cash",
+    "payment_intent_id": null,
+    "payment_method_id": null,
+    "status": null,
+    "confirmation": false
+  }
+},
+{
+  "model": "course_app.payments",
+  "pk": 29,
+  "fields": {
+    "user": 2,
+    "payment_date": "2023-07-23",
+    "paid_course": 1,
+    "paid_lesson": null,
+    "payment_amount": 500000,
+    "method_payment": "cash",
+    "payment_intent_id": null,
+    "payment_method_id": null,
+    "status": null,
+    "confirmation": false
+  }
+},
+{
+  "model": "course_app.payments",
+  "pk": 30,
+  "fields": {
+    "user": 2,
+    "payment_date": "2023-07-23",
+    "paid_course": 1,
+    "paid_lesson": null,
+    "payment_amount": 500000,
+    "method_payment": "cash",
+    "payment_intent_id": null,
+    "payment_method_id": null,
+    "status": null,
+    "confirmation": false
+  }
+},
+{
+  "model": "course_app.payments",
+  "pk": 31,
+  "fields": {
+    "user": 2,
+    "payment_date": "2023-07-23",
+    "paid_course": 1,
+    "paid_lesson": null,
+    "payment_amount": 500000,
+    "method_payment": "cash",
+    "payment_intent_id": null,
+    "payment_method_id": null,
+    "status": null,
+    "confirmation": false
+  }
+},
+{
+  "model": "course_app.payments",
+  "pk": 32,
+  "fields": {
+    "user": 2,
+    "payment_date": "2023-07-24",
+    "paid_course": 1,
+    "paid_lesson": null,
+    "payment_amount": 5000,
+    "method_payment": "cash",
+    "payment_intent_id": "pi_3NXLTpGRIHclJ1YS01olSjEw",
+    "payment_method_id": null,
+    "status": "requires_payment_method",
+    "confirmation": false
+  }
+},
+{
+  "model": "course_app.payments",
+  "pk": 33,
+  "fields": {
+    "user": 2,
+    "payment_date": "2023-07-24",
+    "paid_course": 2,
+    "paid_lesson": null,
+    "payment_amount": 5000,
+    "method_payment": "cash",
+    "payment_intent_id": "pi_3NXLU7GRIHclJ1YS2BkVkqbI",
+    "payment_method_id": null,
+    "status": "requires_payment_method",
+    "confirmation": false
+  }
+},
+{
+  "model": "course_app.payments",
+  "pk": 34,
+  "fields": {
+    "user": 2,
+    "payment_date": "2023-07-24",
+    "paid_course": 1,
+    "paid_lesson": null,
+    "payment_amount": 5000,
+    "method_payment": "cash",
+    "payment_intent_id": "pi_3NXLkAGRIHclJ1YS1SYy6FOt",
+    "payment_method_id": null,
+    "status": "requires_payment_method",
+    "confirmation": false
+  }
+},
+{
+  "model": "course_app.payments",
+  "pk": 35,
+  "fields": {
+    "user": 2,
+    "payment_date": "2023-07-24",
+    "paid_course": 1,
+    "paid_lesson": null,
+    "payment_amount": 5000,
+    "method_payment": "cash",
+    "payment_intent_id": "pi_3NXNlGGRIHclJ1YS2WzfBkZf",
+    "payment_method_id": null,
+    "status": "requires_payment_method",
+    "confirmation": false
+  }
+},
+{
+  "model": "course_app.payments",
+  "pk": 36,
+  "fields": {
+    "user": 2,
+    "payment_date": "2023-07-24",
+    "paid_course": 1,
+    "paid_lesson": null,
+    "payment_amount": 5000,
+    "method_payment": "cash",
+    "payment_intent_id": "pi_3NXOoAGRIHclJ1YS3rJzhfZY",
+    "payment_method_id": "pm_1NXP2vGRIHclJ1YSxOXDto5D",
+    "status": "requires_payment_method",
+    "confirmation": false
+  }
+},
+{
+  "model": "course_app.payments",
+  "pk": 37,
+  "fields": {
+    "user": 2,
+    "payment_date": "2023-07-24",
+    "paid_course": 1,
+    "paid_lesson": null,
+    "payment_amount": 5000,
+    "method_payment": "cash",
+    "payment_intent_id": "pi_3NXP48GRIHclJ1YS2Tlqj1wE",
+    "payment_method_id": "pm_1NXP4VGRIHclJ1YSYIdirJlk",
+    "status": "requires_payment_method",
+    "confirmation": false
+  }
+},
+{
+  "model": "course_app.payments",
+  "pk": 38,
+  "fields": {
+    "user": 2,
+    "payment_date": "2023-07-24",
+    "paid_course": 1,
+    "paid_lesson": null,
+    "payment_amount": 5000,
+    "method_payment": "cash",
+    "payment_intent_id": "pi_3NXPaKGRIHclJ1YS3zaOcUZm",
+    "payment_method_id": "pm_1NXQXHGRIHclJ1YSYeINyt8g",
+    "status": "requires_payment_method",
+    "confirmation": false
+  }
+},
+{
+  "model": "course_app.payments",
+  "pk": 39,
+  "fields": {
+    "user": 2,
+    "payment_date": "2023-07-24",
+    "paid_course": 1,
+    "paid_lesson": null,
+    "payment_amount": 5000,
+    "method_payment": "cash",
+    "payment_intent_id": "pi_3NXQaCGRIHclJ1YS25i55q0c",
+    "payment_method_id": "pm_1NXQaZGRIHclJ1YSSo8pq6Wm",
+    "status": "requires_payment_method",
+    "confirmation": false
+  }
+},
+{
+  "model": "course_app.payments",
+  "pk": 40,
+  "fields": {
+    "user": 2,
+    "payment_date": "2023-07-24",
+    "paid_course": 1,
+    "paid_lesson": null,
+    "payment_amount": 5000,
+    "method_payment": "cash",
+    "payment_intent_id": "pi_3NXQcDGRIHclJ1YS0xtYtrlW",
+    "payment_method_id": "pm_1NXRqfGRIHclJ1YSmDCcoGid",
+    "status": "succeeded",
+    "confirmation": false
+  }
+},
+{
+  "model": "course_app.payments",
+  "pk": 41,
+  "fields": {
+    "user": 2,
+    "payment_date": "2023-07-24",
+    "paid_course": 4,
+    "paid_lesson": null,
+    "payment_amount": 5000,
+    "method_payment": "cash",
+    "payment_intent_id": "pi_3NXSrkGRIHclJ1YS1xEHSk7e",
+    "payment_method_id": "pm_1NXSsAGRIHclJ1YSsb2u2Lyh",
+    "status": "succeeded",
+    "confirmation": false
+  }
+},
+{
+  "model": "course_app.payments",
+  "pk": 42,
+  "fields": {
+    "user": 2,
+    "payment_date": "2023-07-26",
+    "paid_course": 3,
+    "paid_lesson": null,
+    "payment_amount": 5000,
+    "method_payment": "cash",
+    "payment_intent_id": "pi_3NY4SCGRIHclJ1YS0t0QYodr",
+    "payment_method_id": "pm_1NY4TSGRIHclJ1YSC68c0kBU",
+    "status": "succeeded",
+    "confirmation": false
+  }
+},
+{
+  "model": "course_app.payments",
+  "pk": 43,
+  "fields": {
+    "user": 1,
+    "payment_date": "2023-07-26",
+    "paid_course": 2,
+    "paid_lesson": null,
+    "payment_amount": 5000,
+    "method_payment": "cash",
+    "payment_intent_id": "pi_3NY4onGRIHclJ1YS3jRSRUBP",
+    "payment_method_id": "pm_1NY4pBGRIHclJ1YSFY2IM3jF",
+    "status": "succeeded",
+    "confirmation": false
+  }
+},
+{
+  "model": "course_app.payments",
+  "pk": 44,
+  "fields": {
+    "user": 1,
+    "payment_date": "2023-07-26",
+    "paid_course": 3,
+    "paid_lesson": null,
+    "payment_amount": 5000,
+    "method_payment": "cash",
+    "payment_intent_id": "pi_3NY9xhGRIHclJ1YS0I1wQept",
+    "payment_method_id": "pm_1NY9yBGRIHclJ1YS8r0s4meB",
+    "status": "succeeded",
+    "confirmation": false
+  }
+},
+{
+  "model": "course_app.payments",
+  "pk": 45,
+  "fields": {
+    "user": 1,
+    "payment_date": "2023-07-26",
+    "paid_course": 2,
+    "paid_lesson": null,
+    "payment_amount": 5000,
+    "method_payment": "transfer",
+    "payment_intent_id": "pi_3NYBjRGRIHclJ1YS3ovrkW1m",
+    "payment_method_id": "pm_1NYBjgGRIHclJ1YSb0YJQnXT",
+    "status": "succeeded",
+    "confirmation": false
+  }
+},
+{
+  "model": "course_app.subscription",
+  "pk": 1,
+  "fields": {
+    "course": 5,
+    "user": 2,
+    "payment": 1,
+    "status": true
+  }
+},
+{
+  "model": "course_app.subscription",
+  "pk": 2,
+  "fields": {
+    "course": 4,
+    "user": 1,
+    "payment": 1,
+    "status": true
+  }
+},
+{
+  "model": "course_app.subscription",
+  "pk": 10,
+  "fields": {
+    "course": 4,
+    "user": 2,
+    "payment": 41,
+    "status": true
+  }
+},
+{
+  "model": "course_app.subscription",
+  "pk": 11,
+  "fields": {
+    "course": 1,
+    "user": 1,
+    "payment": 1,
+    "status": false
+  }
+},
+{
+  "model": "course_app.subscription",
+  "pk": 12,
+  "fields": {
+    "course": 3,
+    "user": 2,
+    "payment": 42,
+    "status": true
+  }
+},
+{
+  "model": "course_app.subscription",
+  "pk": 13,
+  "fields": {
+    "course": 2,
+    "user": 1,
+    "payment": 43,
+    "status": true
+  }
+},
+{
+  "model": "course_app.subscription",
+  "pk": 14,
+  "fields": {
+    "course": 3,
+    "user": 1,
+    "payment": 44,
+    "status": true
+  }
+},
+{
+  "model": "course_app.subscription",
+  "pk": 15,
+  "fields": {
+    "course": 2,
+    "user": 1,
+    "payment": 45,
+    "status": true
+  }
+},
+{
+  "model": "users.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$WLYbyiwDNorVRL594qwhvv$TBMUAeNlzWtOG9iZ56Ok6IrOPvPvmmbDKGzjCSgjhNI=",
+    "last_login": null,
+    "is_superuser": false,
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-06-29T20:24:08Z",
+    "email": "igorkonov1993@gmail.com",
+    "phone": "89202005060",
+    "city": "Obninsk",
+    "avatar": "",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$Qmp75djAY4QeqEkSkVjhwY$3t7OtzTnKyGaGSEm2ryQc69n5EV1PJY467oPs8msrl4=",
+    "last_login": "2023-07-24T17:52:33.974Z",
+    "is_superuser": true,
+    "first_name": "",
+    "last_name": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2023-07-10T08:12:16.579Z",
+    "email": "super@mail.ru",
+    "phone": "",
+    "city": "",
+    "avatar": "",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": 3,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$5ztOl59aJSFjyuSChKa5aI$4I22LfxcLMmEozY+fl2/zlbpOaGciaTvCwLbTrNikaE=",
+    "last_login": null,
+    "is_superuser": false,
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-07-11T11:03:39.724Z",
+    "email": "test@mail.ru",
+    "phone": "65767657",
+    "city": "zanuda!",
+    "avatar": "",
+    "groups": [],
+    "user_permissions": [
+      22,
+      24,
+      26,
+      28,
+      34,
+      36
+    ]
+  }
+}
+]
