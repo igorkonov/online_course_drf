@@ -1,0 +1,72 @@
+version: "3.9"
+
+services:
+  celery:
+    restart: always
+    build:
+      context: .
+    container_name: 'celery'
+    command: >
+      bash -c "celery -A config worker --beat --loglevel=info"
+    volumes:
+      - .:/app
+      - ./.env.docker:/app/.env
+    links:
+      - redis
+    depends_on:
+      - backend
+      - redis
+
+  backend:
+    build: .
+    container_name: "backend"
+    depends_on:
+      db:
+        condition: service_healthy
+    command: >
+      bash -c "python manage.py makemigrations
+      && python manage.py migrate
+      && python manage.py fill
+      && python manage.py runserver"
+
+    ports:
+      - "8000:8000"
+    volumes:
+      - static_volume:/app/static
+      - ./.env.docker:/app/.env
+
+
+  db:
+    restart: always
+    image: postgres
+    container_name: "db_courses"
+    env_file:
+      - .env.docker
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U postgres" ]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data
+
+
+  redis:
+    image: "redis"
+    container_name: redis
+    expose:
+      - "6379"
+    ports:
+      - "9999:8001"
+      - "6379:6379"
+
+    volumes:
+      - ./redis-data:/var/lib/redis
+
+
+volumes:
+  static_volume:
+  db:
+    driver: local

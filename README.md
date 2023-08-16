@@ -104,7 +104,7 @@ celery -A config worker -l INFO -P eventlet
 10. #### Запуск celery-beat
 
 ```
-celery -A config worker --loglevel=info
+celery -A config worker --beat --loglevel=info
 ```
 
 ## Тестирование
@@ -126,7 +126,35 @@ coverage run --source='.' manage.py test
 ```
 coverage report
 ```
+## Docker
+- для начала создайте отдельный файл `.env.docker` и пропишите в `POSTGRES_HOST` явный адрес. А в `CELERY_BROKER_URL` и
+`CELERY_RESULT_BACKEND` пропишите следующие:
+```
+CELERY_BROKER_URL=redis://redis:6379
+CELERY_RESULT_BACKEND=redis://redis:6379
+```
+#### для того чтобы посмотреть явный адрес выполните следующие команды:
+```
+docker network list 
+```
+находите там вам нужный NETWORK ID
+```
+docker network inspect <NETWORK ID>
+```
+![img.png](adress.png)
 
+- чтобы собрать Docker-образ
+```
+docker build -t <название_образа> .
+```
+### Сборка образа и запуск в фоне после успешной сборки
+```
+docker-compose up -d —build
+```
+- для остановки
+```
+docker-compose down
+```
 ## Документация
 
 ### Документация доступна по адресам:
