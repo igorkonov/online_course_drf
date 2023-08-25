@@ -8,5 +8,5 @@ Deploy to stage:
   script:
     - cp $ENV_PROD .env
     - cp $ENV_STAGE .env.docker
-    - docker-compose -f docker-compose down
+    - docker-compose -f docker-compose.yml down
     - docker-compose -f docker-compose.yml up -d --build

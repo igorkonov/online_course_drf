@@ -27,7 +27,7 @@ services:
       bash -c "python manage.py makemigrations
       && python manage.py migrate
       && python manage.py fill
-      && python manage.py runserver"
+      && gunicorn config.wsgi:application --bind 0.0.0.0:8000"
 
     ports:
       - "8000:8000"
@@ -65,8 +65,25 @@ services:
     volumes:
       - ./redis-data:/var/lib/redis
 
+  nginx:
+    build:
+      context: ./nginx
+    container_name: nginx
+    depends_on:
+      - backend
+    ports:
+      - "8080:80"
+    volumes:
+      - ./static:/static
+      - ./media:/media
+
+
 
 volumes:
   static_volume:
+  static:
+  media:
+  pgdata:
+  redis-data:
   db:
     driver: local
