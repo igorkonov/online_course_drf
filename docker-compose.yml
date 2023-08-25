@@ -5,7 +5,7 @@ services:
     restart: always
     build:
       context: .
-    container_name: 'celery'
+    container_name: celery
     command: >
       bash -c "celery -A config worker --beat --loglevel=info"
     volumes:
@@ -19,12 +19,13 @@ services:
 
   backend:
     build: .
-    container_name: "backend"
+    container_name: backend
     depends_on:
       db:
         condition: service_healthy
     command: >
-      bash -c "python manage.py makemigrations
+      bash -c "python manage.py collectstatic --no-input
+      && python manage.py makemigrations
       && python manage.py migrate
       && python manage.py fill
       && gunicorn config.wsgi:application --bind 0.0.0.0:8000"
@@ -32,14 +33,16 @@ services:
     ports:
       - "8000:8000"
     volumes:
-      - static_volume:/app/static
+      - ./static:/app/static
       - ./.env.docker:/app/.env
+    networks:
+      - app-network
 
 
   db:
     restart: always
     image: postgres
-    container_name: "db_courses"
+    container_name: db_courses
     env_file:
       - .env.docker
     ports:
@@ -54,7 +57,7 @@ services:
 
 
   redis:
-    image: "redis"
+    image: redis
     container_name: redis
     expose:
       - "6379"
@@ -66,24 +69,25 @@ services:
       - ./redis-data:/var/lib/redis
 
   nginx:
-    build:
-      context: ./nginx
+    build: ./nginx
     container_name: nginx
     depends_on:
       - backend
     ports:
       - "8080:80"
     volumes:
+      - ./nginx:/etc/nginx/conf.d
       - ./static:/static
-      - ./media:/media
+    networks:
+      - app-network
 
-
+networks:
+  app-network:
 
 volumes:
-  static_volume:
   static:
-  media:
   pgdata:
   redis-data:
   db:
     driver: local
+
